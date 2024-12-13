@@ -1,0 +1,33 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    .prose {
+      max-width: none;
+    }
+
+    .prose :where(h1, h2, h3, h4, h5, h6) {
+      color: theme('colors.gray.900');
+      @apply dark:text-white;
+    }
+
+    .prose :where(p, li, blockquote, code, pre) {
+      color: theme('colors.gray.700');
+      @apply dark:text-gray-300;
+    }
+
+    .prose :where(a) {
+      @apply text-primary-600 dark:text-primary-400;
+    }
+
+    .prose :where(blockquote) {
+      @apply border-primary-500;
+    }
+
+    .prose :where(code) {
+      @apply bg-gray-100 dark:bg-gray-800;
+    }
+
+    .prose :where(pre) {
+      @apply bg-gray-100 dark:bg-gray-800;
+    }
